@@ -196,8 +196,8 @@ button.a-enter-vr-button {
 	padding-right: 8px;
   }
   /*右下角的地点名字*/
-.text-right{
-	text-align: right;
+.text-left{
+	text-align: left;
 	font-size: 20px;
 	z-index: 1;
 	width: 100%;
