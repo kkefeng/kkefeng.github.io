@@ -24,4 +24,4 @@ FYP 复活了！⚡
 
 https://kkefeng.github.io/
 
-All rights are reserved to Foon Yew High School Johor Bahru
+All rights reserved by Foon Yew High School, Johor Bahru
