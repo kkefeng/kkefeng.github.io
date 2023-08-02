@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+   <meta charset="utf-8">
+   <title>新山宽柔中学边疆</title>
+   <link rel="stylesheet" type="text/css" href="../css/popupsub.css">
+   <link rel="stylesheet" type="text/css" href="../css/popupmain.css">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   <script src="../js/tour/jk/index.js"></script>
+   <script src="../js/tour/jk/coord.js"></script>
+   <script src="../js/tour/global.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+   <div class="nav">
+      <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <button class="dropdown-btn">新山校本部导览
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+            <a href="./redbrick.html" onclick="setplace(1)">入口</a>
+            <a href="./perpustakaan.html" onclick="setplace(12)">小食堂</a>
+            <a href="./canteen.html" onclick="setplace(49)">音乐室</a>
+            <a href="./perpustakaan.html" onclick="setplace(42)">图书馆</a>
+            <a href="./daqiao.html" onclick="setplace(40)">实验室</a>
+            <a href="./jk.html" onclick="setplace(33)">边疆</a>
+            <a href="./redbrick.html" onclick="setplace(10)">草场</a>
+            <a href="./perpustakaan.html" onclick="setplace(51)">文物室</a>
+            <a href="./litang.html" onclick="setplace(44)">天台</a>
+            <a href="./litang.html" onclick="setplace(28)">宿舍</a>
+            <a href="./perpustakaan.html" onclick="setplace(4)">孔子像</a>
+            <a href="./litang.html" onclick="setplace(5)">礼堂</a>
+         </div>
+         <button class="dropdown-btn">趣味游戏
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+            <a href="./jk.html" onclick="setplace(33)">投篮游戏</a>
+            <a href="./redbrick.html" onclick="setplace(10)">Flappy</a>
+            <a href="./perpustakaan.html" onclick="setplace(12)">食堂游戏</a>
+            <a href="./canteen.html" onclick="setplace(49)">Piano</a>
+            <a href="./daqiao.html" onclick="setplace(40)">RGB</a>
+            <a href="./litang.html" onclick="setplace(5)">贪吃蛇</a>
+         </div>
+         <button class="dropdown-btn">至达城分校导览
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+            <a href="../../fyhssa/tour/parking.html" onclick="setplace(11)">入口</a>
+            <a href="../../fyhssa/tour/litang.html" onclick="setplace(1)">礼堂</a>
+            <a href="../../fyhssa/tour/canteen.html" onclick="setplace(1)">食堂</a>
+            <a href="../../fyhssa/tour/xingzheng.html" onclick="setplace(6)">行政楼</a>
+            <a href="../../fyhssa/tour/xingzheng.html" onclick="setplace(11)">图书馆</a>
+            <a href="../../fyhssa/tour/alley.html" onclick="setplace(2)">草场</a>
+            <a href="../../fyhssa/tour/stadium.html" onclick="setplace(2)">体育馆</a>
+         </div>
+         
+         <div class="navbar-text">
+            <a href="#">文字接龙</a>
+            <a href="#">虚拟景点拍照</a>
+            <a href="./donation.pdf" target="_blank" rel="noopener noreferrer">捐款</a>
+            <a href="./lego.pdf" target="_blank" rel="noopener noreferrer">校庆Lego</a>
+            <a href="https://shopee.com.my/shop/175765854/search?originalCategoryId=100639" target="_blank"
+               rel="noopener noreferrer">纪念品</a>
+            <a href="https://www.foonyew.edu.my/" target="_blank" rel="noopener noreferrer">官方网站</a>
+            <a href="https://www.facebook.com/fygame108" target="_blank" rel="noopener noreferrer">官方面子书</a>
+            <a href="../credit/index.html">制作团队</a>
+         </div>
+      </div>
+      <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; 传送门</span>
+   </div>
+
+   <div id="overlay"></div>
+   <div id="vr">
+      <a-scene>
+         <a-assets id="assets">
+         </a-assets>
+         <a-assets>
+            <img id="1" src="../images/jk/(1).webp" alt="jk-1">
+            <img id="2" src="../images/jk/(2).webp" alt="jk-2">
+            <img id="3" src="../images/jk/(3).webp" alt="jk-3">
+            <img id="31" src="../images/jk/(31).webp" alt="jk-4">
+            <img id="32" src="../images/jk/(32).webp" alt="jk-5">
+            <img id="33" src="../images/jk/(33).webp" alt="jk-6">
+         </a-assets>
+         <a-entity id="cam" camera="zoom:1" look-controls="reverseMouseDrag: true" cursor="rayOrigin: mouse"></a-entity>
+         <a-sky id="abackground"></a-sky>
+         <a-entity id="scenes">
+         </a-entity>
+         <a-entity id="scene">
+            <a-entity class="scene1">
+               <a-sphere id="x1" color="red" onclick="setplace(6) ;location.href = './redbrick.html';"
+                  position="-10 -5 15" radius="0.001" material="" geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene1">
+               <a-sphere id="xx1" color="green" onclick="setplace(7) ;location.href = './redbrick.html';"
+                  position="-10 -5 -10" radius="0.001" material="" geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene31">
+               <a-sphere id="x31" color="green" onclick="setplace(1); location.href = './daqiao.html';"
+                  position="10 -5 0" radius="0.001" material="" geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene33">
+               <a-sphere id="x33" color="green" onclick="setplace(6) ;location.href = './redbrick.html';"
+                  position="0 -5 -10" radius="0.001" material="" geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene33">
+               <a-sphere id="box1033" color="blue" onclick="runback(32);" position="0 -5 10" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+         </a-entity>
+         <a-entity class="scene33">
+            <a-sphere id="box33" color="blue" onclick="runback(32);" position="1000 -5 10" radius="0.001" material=""
+               geometry=""> </a-sphere>
+         </a-entity>
+
+
+         <a-entity>
+            <a-image src="../images/duitnow.jpeg" position="0 -1.5 0" rotation="-90 180 90 " z-index="3" width="1.5"
+               height="2">
+            </a-image>
+         </a-entity>
+
+      </a-scene>
+   </div>
+   <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+         dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+               dropdownContent.style.display = "none";
+            } else {
+               dropdownContent.style.display = "block";
+            }
+         });
+      }
+   </script>
+</body>
+
+</html>

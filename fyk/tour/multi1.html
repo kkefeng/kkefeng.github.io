@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+   <meta charset="utf-8">
+   <title>古宽 | 郑格如综合大楼</title>
+   <link rel="stylesheet" type="text/css" href="../css/popupmain.css">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+   <div class="nav">
+      <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+         <a href="./gate.html">校门</a>
+         <a href="./bus.html">候车厅</a>
+         <a href="./pitstop.html">Pit Stop</a>
+         <br>
+         <a href="./voc.html">丹斯里高级拿督张愈昌技职楼</a>
+         <a href="./lib.html">图书楼</a>
+         <br>
+         <a href="./auditorium.html">大讲堂</a>
+         <a href="./multi1.html">郑格如综合大楼 p1</a>
+         <a href="./multi2.html">郑格如综合大楼 p2</a>
+         <a href="./multi3.html">郑格如综合大楼 p3</a>
+         <br>
+         <a href="./hall.html">丹斯里林梧桐大礼堂</a>
+         <a href="./canteen.html">食堂</a>
+         <br>
+         <a href="./office.html">教师办公室</a>
+         <a href="./classroom1.html">陈爱礼李光前教学楼 1</a>
+         <a href="./classroom2.html">陈爱礼李光前教学楼 2</a>
+         <a href="./classroom3.html">陈爱礼李光前教学楼 3</a>            
+         <a href="./classroom4.html">陈爱礼李光前教学楼 4</a>
+         <br>
+         <a href="./field.html">中华体育场</a>
+         <a href="./view.html">观众席</a>
+         <a href="./flag.html">升旗广场</a>
+         <a href="./stadium.html">雨盖篮球场</a>
+     
+      </div>
+      <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; 传送门</span>
+   </div>
+   <a-scene>
+      <a-entity id="cam" camera="zoom:1" look-controls="reverseMouseDrag: true" cursor="rayOrigin: mouse"></a-entity>
+      <a-sky src="../images/multi3.JPG" rotation="0 -90 0"></a-sky>
+   </a-scene>
+
+   <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+         dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+               dropdownContent.style.display = "none";
+            } else {
+               dropdownContent.style.display = "block";
+            }
+         });
+      }
+   </script>
+
+   <script>
+      function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+      }
+   </script>
+</body>
+
+</html>

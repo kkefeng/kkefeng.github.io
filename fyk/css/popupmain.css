@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i,600,700,800&display=swap');
+.button {
+	border-radius: 4px;
+	background: linear-gradient(to right, #c0392b, #8e44ad);
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 30px;
+	padding: 1.2%;
+	width: auto;
+	bottom: 120px;
+	left: 0.5%;
+	cursor: pointer;
+	margin: 5px;
+	z-index: 5;
+	position: absolute;
+	display: none;
+}
+
+.button-2 {
+	bottom: 30px;
+}
+
+.button-game {
+	top: 25px;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.3s;
+}
+
+.button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -25px;
+	transition: 0s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.button {
+	animation: fadeIn ease 2s;
+	-webkit-animation: fadeIn ease 2s;
+	-moz-animation: fadeIn ease 2s;
+	-o-animation: fadeIn ease 2s;
+	-ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+@media (max-width: 767px) {
+	.button {
+		font-size: 25px;
+		width: auto;
+		bottom: 80px;
+	}
+	.button-2 {
+		bottom: 20px;
+	}
+	.button-game {
+		z-index: 0;
+	}
+}
+/*Modal for Lego advertisement*/
+.container-lego{
+	background-color: black;
+	font-size: 20px;
+	opacity: 90%;
+	color: white;
+	z-index: 9;
+	position: relative;
+	padding-top: 5px;
+	text-align: center;
+	animation: fadeIn ease 2s;
+	-webkit-animation: fadeIn ease 2s;
+	-moz-animation: fadeIn ease 2s;
+	-o-animation: fadeIn ease 2s;
+	-ms-animation: fadeIn ease 2s;
+}
+
+.container-lego:hover {opacity: 0.85}
+
+@media screen and (max-width: 768px) {
+	.container-lego{
+		font-size: 18px;
+	}		
+}
+
+.row,
+.container-fluid {
+	margin-left: 0px!important;
+	margin-right: 0px!important;
+}
+
+iframe {
+	display: inline-block;
+	width: 70%;
+	height: 70%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	border-width: 0px;
+	box-sizing: border-box;
+	z-index: 3;
+	position: relative;
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.youtubecss {
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+/* A-Frame VR button position fixed*/
+button.a-enter-vr-button {
+	z-index: 999999;
+	position: fixed
+}
+
+/* The side navigation menu */
+.nav {
+	background: #1b1b1b;
+	color: white;
+	font-size: 20px;
+	position: relative;
+	width: 150px;
+	display: flex;
+	z-index: 100;
+	left: 85%;
+	top: 10%;
+	border-radius: 25px;
+	justify-content:center;
+}
+
+.dropdown-btn {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	border: none;
+	background: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+  }
+  
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	background-color: #000112;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px; 
+  }
+
+/* Dropdown 以外的文字（官方网站，官方面子书，制作团队......）*/
+.navbar-text{
+	  font-size: 25px;
+  }
+  
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+.sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+/* Some media queries for responsiveness */
+ @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+  
+  @media screen and (max-width: 768px) {
+	.nav{
+		left: 55%;
+		top: 10%;
+		width: 125px;
+	}
+  }
+
+  /* Add an active class to the active dropdown button */
+.active {
+	background-color:#384152;
+	color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+	display: none;
+	background-color: #262626;
+	padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+	float: right;
+	padding-right: 8px;
+  }
+  
+
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+   <meta charset="utf-8">
+   <title>新山宽柔中学大礼堂</title>
+   <link rel="stylesheet" type="text/css" href="../css/popupmain.css">
+   <link rel="stylesheet" type="text/css" href="../css/popupsub.css">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   <script src="../js/tour/global.js"></script>
+   <script src="../js/tour/litang/index.js"></script>
+   <script src="../js/tour/litang/coord.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+   <div id="lego" class="container-lego">
+      <h2>校庆纪念品——校庆纪念迷你积木</h2>
+      <a href="#"
+         target="_blank"><img src="https://cfshopeesg-a.akamaihd.net/file/c48825ff1dba5dfb92b30abdf57cad42"></a>
+   </div>
+   <div class="nav">
+      <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <button class="dropdown-btn">新山校本部导览
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+            <a href="./redbrick.html" onclick="setplace(1)">入口</a>
+            <a href="./perpustakaan.html" onclick="setplace(12)">小食堂</a>
+            <a href="./canteen.html" onclick="setplace(49)">音乐室</a>
+            <a href="./perpustakaan.html" onclick="setplace(42)">图书馆</a>
+            <a href="./daqiao.html" onclick="setplace(40)">实验室</a>
+            <a href="./jk.html" onclick="setplace(33)">边疆</a>
+            <a href="./redbrick.html" onclick="setplace(10)">草场</a>
+            <a href="./perpustakaan.html" onclick="setplace(51)">文物室</a>
+            <a href="./litang.html" onclick="setplace(44)">天台</a>
+            <a href="./litang.html" onclick="setplace(28)">宿舍</a>
+            <a href="./perpustakaan.html" onclick="setplace(4)">孔子像</a>
+            <a href="./litang.html" onclick="setplace(5)">礼堂</a>
+         </div>
+         <button class="dropdown-btn">趣味游戏
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+            <a href="./jk.html" onclick="setplace(33)">投篮游戏</a>
+            <a href="./redbrick.html" onclick="setplace(10)">Flappy</a>
+            <a href="./perpustakaan.html" onclick="setplace(12)">食堂游戏</a>
+            <a href="./canteen.html" onclick="setplace(49)">Piano</a>
+            <a href="./daqiao.html" onclick="setplace(40)">RGB</a>
+            <a href="./litang.html" onclick="setplace(5)">贪吃蛇</a>
+         </div>
+         <button class="dropdown-btn">至达城分校导览
+            <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-container">
+            <a href="../../fyhssa/tour/parking.html" onclick="setplace(11)">入口</a>
+            <a href="../../fyhssa/tour/litang.html" onclick="setplace(1)">礼堂</a>
+            <a href="../../fyhssa/tour/canteen.html" onclick="setplace(1)">食堂</a>
+            <a href="../../fyhssa/tour/xingzheng.html" onclick="setplace(6)">行政楼</a>
+            <a href="../../fyhssa/tour/xingzheng.html" onclick="setplace(11)">图书馆</a>
+            <a href="../../fyhssa/tour/alley.html" onclick="setplace(2)">草场</a>
+            <a href="../../fyhssa/tour/stadium.html" onclick="setplace(2)">体育馆</a>
+         </div>
+         
+         <div class="navbar-text">
+            <a href="#">文字接龙</a>
+            <a href="#">虚拟景点拍照</a>
+            <a href="./donation.pdf" target="_blank" rel="noopener noreferrer">捐款</a>
+            <a href="./lego.pdf" target="_blank" rel="noopener noreferrer">校庆Lego</a>
+            <a href="https://shopee.com.my/shop/175765854/search?originalCategoryId=100639" target="_blank"
+               rel="noopener noreferrer">纪念品</a>
+            <a href="https://www.foonyew.edu.my/" target="_blank" rel="noopener noreferrer">官方网站</a>
+            <a href="https://www.facebook.com/fygame108" target="_blank" rel="noopener noreferrer">官方面子书</a>
+            <a href="../credit/index.html">制作团队</a>
+         </div>
+      </div>
+      <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776; 传送门</span>
+   </div>
+
+   <div id="overlay"></div>
+   <div id="vr">
+      <a-scene>
+         <a-assets id="assets">
+         </a-assets>
+         <a-assets>
+            <img id="1" src="../images/litang/(1).webp" alt="litang-1">
+            <img id="2" src="../images/litang/(2).webp" alt="litang-2">
+            <img id="3" src="../images/litang/(3).webp" alt="litang-3">
+            <img id="44" src="../images/litang/(44).webp" alt="roof">
+         </a-assets>
+         <a-entity id="cam" camera="zoom:1" look-controls="reverseMouseDrag: true" cursor="rayOrigin: mouse"></a-entity>
+         <a-sky id="abackground"></a-sky>
+         <a-entity id="scenes">
+         </a-entity>
+         <a-entity id="scene">
+            <a-entity class="scene6">
+               <a-sphere id="x6" color="green" onclick="xrun(9)" position="10 -5 -20" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene5">
+               <a-sphere id="x5" color="green" onclick="xrun(31)" position="-3 -5 -15" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene32">
+               <a-sphere id="x32" color="green" onclick="xrun(7)" position="15 -5 3" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <!--<a-entity class="scene32"><a-sphere id="x32" color="green" onclick="xrun(7)" position="15 -5 3" radius="0.001" material="" geometry=""> </a-sphere>
+                  </a-entity> Duplicate ID "x32"-->
+            <a-entity class="scene7">
+               <a-sphere id="x7" color="green" onclick="xrun(32)" position="30 -5 -15" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene31">
+               <a-sphere id="x31" color="green" onclick="xrun(5)" position="-5 -5 -10" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene16">
+               <a-sphere id="x16" color="green" onclick="xrun(25)" position="-30 -5 0" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene25">
+               <a-sphere id="x25" color="green" onclick="xrun(16)" position="0 -5 -30" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene19">
+               <a-sphere id="x19" color="green" onclick="xrun(29)" position="-19 -5 -22" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene29">
+               <a-sphere id="x29" color="green" onclick="xrun(19)" position="0 -5 25" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene29">
+               <a-sphere id="xx29" color="green" onclick="xrun(44)" position="-11 -5 6" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene9">
+               <a-sphere id="x9" color="green" onclick="xrun(6)" position="-10 -5 -2" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene28">
+               <a-sphere id="x28" color="green" onclick="xrun(36)" position="45 -5 45" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene36">
+               <a-sphere id="x36" color="green" onclick="xrun(28)" position="0 -5 -30" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene34">
+               <a-sphere id="x34" color="green" onclick="xrun(43)" position="20 -5 -30" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene43">
+               <a-sphere id="x43" color="green" onclick="xrun(34)" position="25 -5 -30" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene43">
+               <a-sphere id="xx43" color="green" onclick="xrun(42)" position="-25 -5 25" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene42">
+               <a-sphere id="x42" color="green" onclick="xrun(41)" position="-13 -5 -3" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene42">
+               <a-sphere id="xx42" color="green" onclick="xrun(43)" position="10 -5 5.5" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene41">
+               <a-sphere id="x41" color="green" onclick="xrun(40)" position="-10 -5 -4.5" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene41">
+               <a-sphere id="xx41" color="green" onclick="xrun(42)" position="10 -5 5.5" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene40">
+               <a-sphere id="x40" color="green" onclick="xrun(39)" position="-10 -5 1.5" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene40">
+               <a-sphere id="xx40" color="green" onclick="xrun(41)" position="10 -5 0" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene39">
+               <a-sphere id="x39" color="green" onclick="xrun(40)" position="10 -5 0.5" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene39">
+               <a-sphere id="xx39" color="green" onclick="xrun(37)" position="-10 -5 0" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene37">
+               <a-sphere id="x37" color="green" onclick="xrun(38)" position="7 -3 7" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene37">
+               <a-sphere id="xx37" color="green" onclick="setplace(5); location.href = './canteen.html';"
+                  position="-20 -10 6" radius="0.001" material="" geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene37">
+               <a-sphere id="xxx37" color="green" onclick="xrun(39)" position="0 -5 -15" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene38">
+               <a-sphere id="x38" color="green" onclick="xrun(37)" position="13 -3 25" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene44">
+               <a-sphere id="x44" color="green" onclick="xrun(29)" position="13 -12 18" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene48">
+               <a-sphere id="x48" color="green" onclick="xrun(45)" position="-3 -5 17" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene45">
+               <a-sphere id="x45" color="green" onclick="xrun(48)" position="2 -5 17" radius="0.001" material=""
+                  geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene1">
+               <a-sphere id="x1" color="green" onclick="setplace(9); location.href = './perpustakaan.html';"
+                  position="-10 -5 0" radius="0.001" material="" geometry=""> </a-sphere>
+            </a-entity>
+            <a-entity class="scene24">
+               <a-sphere id="x24" color="green" onclick="setplace(20); location.href = './perpustakaan.html';"
+                  position="-55 -5 -5" radius="0.001" material="" geometry=""> </a-sphere>
+            </a-entity>
+         </a-entity>
+
+         <a-entity>
+            <a-image src="../images/duitnow.jpeg" position="0 -1.5 0" rotation="-90 180 90 " z-index="3" width="1.5"
+               height="2">
+            </a-image>
+         </a-entity>
+
+      </a-scene>
+   </div>
+   <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+         dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+               dropdownContent.style.display = "none";
+            } else {
+               dropdownContent.style.display = "block";
+            }
+         });
+      }
+   </script>
+</body>
+
+</html>
